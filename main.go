@@ -1,22 +1,19 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 var (
 	FiniteFeild = []int64{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16}
 	g           = FiniteFeild[2]
 	q           = FiniteFeild[len(FiniteFeild)-1]
 	p           = FiniteFeild[len(FiniteFeild)-1] + 1
-
 )
 
 func main() {
 
 	var i int64
 
-	i = 4
+	i = 1
 
 	s1 := fx(i) % q
 
@@ -30,12 +27,13 @@ func main() {
 		panic("wrong")
 	}
 
+	fmt.Println("verified")
+
 }
 
 func fx(i int64) int64 {
 	x := i
 	fi := x*x + 5*x + 3
-	fmt.Println("fi", fi)
 	return fi
 }
 
